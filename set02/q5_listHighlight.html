@@ -1,0 +1,50 @@
+<!-- Create a webpage with a <ul> list of five items.
+Using JavaScript:
+Change the background color of every even-indexed <li> to a different color (like grey or blue)
+Add text-transform: uppercase to all items
+This lets you:
+Select elements using querySelectorAll
+Use style manipulation on multiple elements -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul>
+        <li>zero</li>
+        <li>one</li>
+        <li>two</li>
+        <li>three</li>
+        <li>four</li>
+    </ul>
+</body>
+<script>
+    /*
+        const list = document.querySelectorAll("li")
+
+        const nodeToArray = Array.from(list)
+        console.log(nodeToArray);        
+        for (let index = 0; index < nodeToArray.length; index++) {
+            if (index % 2 === 0) {
+                nodeToArray[index].style.backgroundColor = "blue"
+            }
+        }
+
+        list.forEach( (listElement) => console.log(listElement.innerHTML = listElement.innerHTML.toUpperCase()) )
+    */
+// Good try above, but a more optimized solution could be:
+
+        const list = document.querySelectorAll("li")
+        list.forEach( (listElement, index) => {
+            if ( index % 2 === 0) {
+                listElement.style.backgroundColor = "blue"
+            }
+
+            listElement.style.textTransform = "uppercase"
+        })        
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!-- Create a simple webpage with this HTML initially:
+<div id="container">
+  <p>This is the old paragraph</p>
+</div>
+Using JavaScript:
+Create a new paragraph with the text "This is the new paragraph"
+Replace the old paragraph with the new one
+(Practice: replaceWith or replaceChild) -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q5 - DOM</title>
+  </head>
+  <body>
+    <div id="container">
+      <p>This is the old paragraph</p>
+    </div>
+  </body>
+  <script>
+    const newParagraph = document.createElement("p")
+    newParagraph.appendChild(document.createTextNode("This is the new paragraph"))
+
+    // Using replaceWith:-
+    const oldParagraph = document.querySelector("p")
+    oldParagraph.replaceWith(newParagraph)    
+
+    // Using replaceChild:-
+    // const div = document.querySelector("#container")
+    // div.replaceChild(newParagraph, oldParagraph)
+    
+  </script>
+</html>

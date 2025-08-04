@@ -1,0 +1,30 @@
+<!-- Create a webpage where:
+There’s an array of fruits: ["Apple", "Banana", "Mango", "Orange"]
+Dynamically create a <ul> and add each fruit as a <li>
+Append the <ul> to <div id="fruitList">
+Practice: createElement, createTextNode, appendChild -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="fruitList">
+
+    </div>
+</body>
+<script>
+    const fruits = ["Apple", "Banana", "Mango", "Orange"]
+    const ul = document.createElement("ul")
+    const fruitList = document.querySelector("#fruitList")
+    fruitList.appendChild(ul)
+    for (let index = 0; index < fruits.length; index++) {
+        let fruit = document.createElement("li")
+        fruit.appendChild(document.createTextNode(fruits[index]))
+        ul.appendChild(fruit)
+    }
+    
+</script>
+</html>
