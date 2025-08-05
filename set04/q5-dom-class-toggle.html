@@ -8,3 +8,33 @@ If text is “Light Mode”, change to “Dark Mode” and set background color 
 If text is “Dark Mode”, change to “Light Mode” and reset to white background, black text
 ✅ You can use document.body.style, textContent, and basic conditionals.
 📌 No need for events or listeners, you can call the function directly from inline HTML if needed for now. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Class Toggle</title>
+</head>
+<body>
+    <p id="modeText">Light Mode</p>
+
+</body>
+<script>
+    const button = document.createElement('button')
+    const p = document.getElementById('modeText')
+    button.innerHTML = 'Toggle Mode'
+    document.body.appendChild(button)
+    button.addEventListener('click', function(){
+            if(p.innerHTML === 'Light Mode') {
+            document.body.style.backgroundColor = 'black'
+            p.innerHTML = 'Dark Mode'
+            p.style.color = 'white'
+        } else if (p.innerHTML === 'Dark Mode') {
+            document.body.style.backgroundColor = 'white'
+            p.innerHTML = 'Light Mode'
+            p.style.color = 'black'
+        }
+    })
+</script>
+</html>

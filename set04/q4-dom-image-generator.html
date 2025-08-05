@@ -9,3 +9,26 @@ Append them to the #gallery div
 Practice:
 createElement, setAttribute, appendChild
  -->
+<!-- https://picsum.photos/200/300 -->
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Image Generator</title>
+ </head>
+ <body>
+    <div id="gallery"></div>
+ </body>
+ <script>
+    for (let index = 0; index < 3; index++) {
+        let image = document.createElement('img')
+        const gallery = document.getElementById('gallery')
+        image.setAttribute('src', 'https://picsum.photos/200/300')
+        image.style.width = '150px'
+        gallery.appendChild(image)
+        console.log(image)
+    }
+ </script>
+ </html>

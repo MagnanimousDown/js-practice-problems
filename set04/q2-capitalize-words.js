@@ -7,6 +7,7 @@
 
 function capitalizeWords(str) {
   let strArray = str.split(" ");
+  // console.log(strArray)
   strArray = strArray.map( (element) => element[0].toUpperCase() + element.slice(1))
   const myStr = strArray.join(" ")
   console.log(myStr);

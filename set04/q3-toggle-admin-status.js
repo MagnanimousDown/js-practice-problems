@@ -8,3 +8,20 @@
 //   { username: "bob", isAdmin: false },
 // ];
 
+const users = [
+  { username: "alice", isAdmin: true },
+  { username: "bob", isAdmin: false },
+];
+
+function toggleAdminStatus(users){
+    users.forEach(element => {
+        element.isAdmin = element.isAdmin ? false : true
+    });
+    return users
+}
+
+const updatedUsers = toggleAdminStatus(users)
+console.log(updatedUsers);
+
+// simpler code could be:
+// element.isAdmin = !element.isAdmin;

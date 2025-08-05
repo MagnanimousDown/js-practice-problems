@@ -15,7 +15,8 @@ function removeDuplicates(arr) {
 }
 
 // const myArray = [1, 2, 2, 3, 4, 4]
-const myArray = ["1", "1", "2", "2"]    // How does the Set handles automatically when it comes to change in data type from num to string? Like, here I passed string but still it gave me correct results, as 1 and 2 as unique
+const myArray = ["1", "1", "2", "2"]    
 const uniqueArray = removeDuplicates(myArray)
 console.log(`The unique elements are ${uniqueArray}`);
 
+// We can even shorten the solution with one liner as return [...new Set(arr)];
