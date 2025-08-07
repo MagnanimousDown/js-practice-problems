@@ -1,0 +1,60 @@
+<!-- Problem 5: Async/Await with DOM – User Info Card -->
+ <!-- Your Task in JS:
+On clicking the button, fetch data from:
+https://api.github.com/users/magnanimousDown
+
+Display in #userCard:
+Avatar image
+Name
+Public repos
+Followers
+
+Constraints:
+Use async/await.
+Handle errors using try/catch. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Card</title>
+</head>
+<body>
+    <button id="loadUser">Load GitHub User</button>
+    <div id="userCard"></div>
+</body>
+<script>
+    document.querySelector('#loadUser').addEventListener('click', function(){
+        async function loadUser(){
+            try {
+                const response = await fetch('https://api.github.com/users/magnanimousDown')
+                const data = await response.json()
+                await insertUserData(data)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        loadUser()
+
+        function insertUserData(data){
+            const userCard = document.querySelector('#userCard')
+            const avatar = document.createElement('img')
+            avatar.setAttribute('src', data.avatar_url)
+            userCard.appendChild(avatar)
+
+            const name = document.createElement('p')
+            name.innerHTML = `Name: ${data.name}`
+            userCard.appendChild(name)
+
+            const publicRepo = document.createElement('p')
+            publicRepo.innerHTML = `Public Repos: ${data.public_repos}`
+            userCard.appendChild(publicRepo)
+
+            const followers = document.createElement('p')
+            followers.innerHTML = `Number of followers: ${data.followers}`
+            userCard.appendChild(followers)
+        }
+    })
+</script>
+</html>

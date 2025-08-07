@@ -1,0 +1,30 @@
+ <!-- Problem 3: Event Handling in the DOM
+Your Task in JS:
+When the button is clicked:
+Toggle the <p> visibility.
+Change the button text to "Hide Message" / "Show Message" accordingly. -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Toggle Message</title>
+</head>
+<body>
+    <button id="toggleBtn">Show Message</button>
+    <p id="message" style="display: none">You clicked the button!</p>
+</body>
+<script>
+    document.querySelector('#toggleBtn').addEventListener('click', function(){
+        const p = document.querySelector('#message')
+        if(p.style.display === 'none'){
+            p.style.removeProperty('display')
+            document.querySelector('#toggleBtn').innerHTML = 'Hide Message'
+        } else {
+            p.style.display = 'none'
+            document.querySelector('#toggleBtn').innerHTML = 'Show Message'
+        }
+    })
+</script>
+</html>

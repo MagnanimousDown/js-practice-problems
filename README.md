@@ -8,7 +8,15 @@ A collection of JavaScript practice sets based on my learning journey from **Cha
 - ✅ Set 02 – Array methods, filtering, DOM querying
 - ✅ Set 03 – String & array logic, DOM replace, reduce
 - ✅ Set 04 – `Set`, `split()` and `join()`, Toggling object properties, DOM manipulation and a little of Event handling
+- ✅ Set 05 – Spread operator, `this` behavior, Promises, event handling, async/await, DOM exercises
 
 ## My Progress
 
-Started learning JavaScript on **12th July 2025**. These exercises help me solidify core concepts before diving deeper into MERN stack.
+Started learning JavaScript on **12th July 2025**. These exercises help me solidify core concepts before diving deeper into **MERN stack**.
+
+- Currently sharpening intermediate topics like:
+  - Spread/rest operators
+  - `this` in regular vs arrow functions
+  - Promises and async/await
+  - DOM event handling
+  - Real-world mini projects
